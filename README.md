@@ -1,3 +1,102 @@
+# React, Tailwind & Typescript Starter
+
+This is a was built using https://dev.to/kevin_odongo35/react-tailwind-and-typescript-35hk as reference, with the following basic steps:
+
+1. Create react app
+```
+yarn create react-app my__app__name --template typescript
+```
+
+2. Install tailwing and craco
+
+```
+cd my__app__name
+
+// install the following packages for Tailwind
+npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+
+// Then install craco package
+ npm install @craco/craco
+
+// run the following commad. This will create a file called tailwind.config.js
+npx tailwind init
+```
+
+3. Configure craco:
+```
+// __craco.config.js__
+touch craco.config.js
+
+// add the following content in the craco.config.js
+module.exports = {
+  style: {
+    postcss: {
+      plugins: [
+        require('tailwindcss'),
+        require('autoprefixer'),
+      ],
+    },
+  },
+}
+```
+
+4. configure tailwind
+```
+// tailwind.config.js
+// in this file we can add the customized colors tailwind provides.
+
+const colors = require('tailwindcss/colors')
+module.exports = {
+   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+    darkMode: false, // or 'media' or 'class'
+    theme: {
+      extend: {},
+      colors: {
+      transparent: 'transparent',
+      current: 'currentColor'
+      ....
+    }
+    },
+    variants: {
+      extend: {},
+    },
+    plugins: [
+      require('@tailwindcss/forms'), // import tailwind forms
+   ],
+  }
+```
+5. revise scripts in package.json
+```
+// __package.json__
+  {
+    // ...
+    "scripts": {
+
+     "start": "react-scripts start", // remove
+
+     "build": "react-scripts build", // remove
+
+     "test": "react-scripts test", // remove
+
+     "start": "craco start", // add
+
+     "build": "craco build", // add
+
+     "test": "craco test", // add
+      "eject": "react-scripts eject" // stays the same
+    },
+  }
+```
+6. Add tailwind to index.css
+```
+//__./src/index.css__
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+
+The rest of the steps in the tutorial were not used. 
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
