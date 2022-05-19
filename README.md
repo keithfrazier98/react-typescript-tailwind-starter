@@ -1,5 +1,9 @@
 # React, Tailwind & Typescript Starter
 
+## Clone locally:
+1. clone into local repository
+2. `yarn install`
+
 This is a was built using https://dev.to/kevin_odongo35/react-tailwind-and-typescript-35hk as reference, with the following basic steps:
 
 1. Create react app
@@ -97,7 +101,7 @@ module.exports = {
 
 The rest of the steps in the tutorial were not used. 
 
-# Getting Started with Create React App
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
