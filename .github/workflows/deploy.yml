@@ -1,0 +1,16 @@
+name: deploy website
+on: [branch]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn build
+      - uses: amondnet/vercel-action@v20 #deploy
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
+          github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
+          # vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.ORGID}}  #Required
+          vercel-project-id: ${{ secrets.PROJECTID}} #Required 
+          working-directory: ./sub-directory
