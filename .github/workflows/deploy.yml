@@ -1,11 +1,12 @@
 name: deploy website
-on: [branch]
+on: push
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn build
+      - run: | 
+          yarn build
       - uses: amondnet/vercel-action@v20 #deploy
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
