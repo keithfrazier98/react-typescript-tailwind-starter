@@ -1,5 +1,18 @@
 # React, Tailwind & Typescript Starter
 
+
+Navigation
+- [React, Tailwind & Typescript Starter](#react-tailwind--typescript-starter)
+  - [Clone locally:](#clone-locally)
+  - [Enabling the github workflow](#enabling-the-github-workflow)
+  - [Getting Started with Create React App](#getting-started-with-create-react-app)
+  - [Available Scripts](#available-scripts)
+    - [`yarn start`](#yarn-start)
+    - [`yarn test`](#yarn-test)
+    - [`yarn build`](#yarn-build)
+    - [`yarn eject`](#yarn-eject)
+  - [Learn More](#learn-more)
+
 ## Clone locally:
 1. clone into local repository
 2. `yarn install`
@@ -100,6 +113,14 @@ module.exports = {
 ```
 
 The rest of the steps in the tutorial were not used. 
+
+## Enabling the github workflow 
+1. create a new project in vercel 
+2. connect vercel to remote repo (through vercel ui)
+3. open your local directory in terminal 
+4. run `vercel` and link to existing project (you may be able to just skip steps 1 and 2 but this is how I did it)
+5. open the json file generated in your local repo after running `vercel`
+6. add the project_id and org_id to the github secrets in your remote repo 
 
 ## Getting Started with Create React App
 
