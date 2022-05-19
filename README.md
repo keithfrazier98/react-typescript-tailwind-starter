@@ -115,7 +115,7 @@ module.exports = {
 The rest of the steps in the tutorial were not used. 
 
 ## Enabling the github workflow 
-1. create a new project in vercel 
+1. create a new project in vercel and set the project type to 'other' rather than 'react'
 2. connect vercel to remote repo (through vercel ui)
 3. open your local directory in terminal 
 4. run `vercel` and link to existing project (you may be able to just skip steps 1 and 2 but this is how I did it)
