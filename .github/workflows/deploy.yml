@@ -1,4 +1,5 @@
-name: deploy website
+name: Vercel Action
+uses: amondnet/vercel-action@v20.0.1
 on: push
 jobs:
   deploy:
@@ -8,7 +9,6 @@ jobs:
       - run: | 
           yarn install
           yarn build
-      - uses: amondnet/vercel-action@v20 #deploy
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }} # Required
           github-token: ${{ secrets.GITHUB_TOKEN }} #Optional 
