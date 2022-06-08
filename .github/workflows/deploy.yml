@@ -19,7 +19,7 @@ jobs:
       deployments: write
     steps: 
       - name: start deployment
-        uses: bobheadxi/deployment@v.0.4.3
+        uses: bobheadxi/demployments@v0.4.3
         id: deployment
         with:   
           step: start
