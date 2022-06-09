@@ -4,5 +4,7 @@
     "github": {
       "enabled": false
     },
-    "routes": [{ "src": "/[^.]+", "dest": "/", "status": 200 },{ "src": "/[^.]+", "dest": "/trade", "status": 200 }]
+    "builds": [
+      { "src": "./build", "use": "@vercel/static" }
+    ]
   }
