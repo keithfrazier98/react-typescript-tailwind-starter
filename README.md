@@ -26,36 +26,38 @@ yarn create react-app my__app__name --template typescript
 
 2. Install tailwing and craco
 
-```
-cd my__app__name
 
-// install the following packages for Tailwind
-npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
+    1. `cd my__app__name`
 
-// Then install craco package
- npm install @craco/craco
+    2. install the following packages for Tailwind
+    `npm install -D tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9`
 
-// run the following commad. This will create a file called tailwind.config.js
-npx tailwind init
-```
+    3. Then install craco package
+     `npm install @craco/craco`
+
+    4. run the following commad. This will create a file called tailwind.config.js
+    `npx tailwind init`
+
 
 3. Configure craco:
-```
-// __craco.config.js__
-touch craco.config.js
 
-// add the following content in the craco.config.js
-module.exports = {
-  style: {
-    postcss: {
-      plugins: [
-        require('tailwindcss'),
-        require('autoprefixer'),
-      ],
-    },
-  },
-}
-```
+    1. __craco.config.js__
+     run `touch craco.config.js`
+
+    2. add the following content in the craco.config.js
+    ```
+    module.exports = {
+      style: {
+        postcss: {
+          plugins: [
+            require('tailwindcss'),
+            require('autoprefixer'),
+          ],
+        },
+      },
+    }
+    ```
+
 
 4. configure tailwind
 ```
