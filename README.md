@@ -44,8 +44,8 @@ yarn create react-app my__app__name --template typescript
     *__craco.config.js__*
      run `touch craco.config.js`
 
-    2. add the following content in the craco.config.js
-    ```
+    1. add the following content in the craco.config.js
+    ```javascript
     module.exports = {
       style: {
         postcss: {
@@ -61,8 +61,8 @@ yarn create react-app my__app__name --template typescript
 
 4. configure tailwind
     *tailwind.config.js*
-    // in this file we can add the customized colors tailwind provides.
-    ```
+    > in this file we can add the customized colors tailwind provides.
+    ```javascript
       const colors = require('tailwindcss/colors')
       module.exports = {
          purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
@@ -86,9 +86,8 @@ yarn create react-app my__app__name --template typescript
     
 5. revise scripts in package.json
       *__package.json__*
-      ```
+      ```javascript
         {
-          // ...
           "scripts": {
 
            "start": "react-scripts start", // remove
