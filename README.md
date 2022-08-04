@@ -41,7 +41,7 @@ yarn create react-app my__app__name --template typescript
 
 3. Configure craco:
 
-    1. __craco.config.js__
+    *__craco.config.js__*
      run `touch craco.config.js`
 
     2. add the following content in the craco.config.js
@@ -60,59 +60,60 @@ yarn create react-app my__app__name --template typescript
 
 
 4. configure tailwind
-```
-// tailwind.config.js
-// in this file we can add the customized colors tailwind provides.
-
-const colors = require('tailwindcss/colors')
-module.exports = {
-   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-    darkMode: false, // or 'media' or 'class'
-    theme: {
-      extend: {},
-      colors: {
-      transparent: 'transparent',
-      current: 'currentColor'
-      ....
-    }
-    },
-    variants: {
-      extend: {},
-    },
-    plugins: [
-      require('@tailwindcss/forms'), // import tailwind forms
-   ],
-  }
-```
+    *tailwind.config.js*
+    // in this file we can add the customized colors tailwind provides.
+    ```
+      const colors = require('tailwindcss/colors')
+      module.exports = {
+         purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
+          darkMode: false, // or 'media' or 'class'
+          theme: {
+            extend: {},
+            colors: {
+            transparent: 'transparent',
+            current: 'currentColor'
+            ....
+          }
+          },
+          variants: {
+            extend: {},
+          },
+          plugins: [
+            require('@tailwindcss/forms'), // import tailwind forms
+         ],
+        }
+      ```
+    
 5. revise scripts in package.json
-```
-// __package.json__
-  {
-    // ...
-    "scripts": {
+      *__package.json__*
+      ```
+        {
+          // ...
+          "scripts": {
 
-     "start": "react-scripts start", // remove
+           "start": "react-scripts start", // remove
 
-     "build": "react-scripts build", // remove
+           "build": "react-scripts build", // remove
 
-     "test": "react-scripts test", // remove
+           "test": "react-scripts test", // remove
 
-     "start": "craco start", // add
+           "start": "craco start", // add
 
-     "build": "craco build", // add
+           "build": "craco build", // add
 
-     "test": "craco test", // add
-      "eject": "react-scripts eject" // stays the same
-    },
-  }
-```
+           "test": "craco test", // add
+            "eject": "react-scripts eject" // stays the same
+          },
+        }
+      ```
 6. Add tailwind to index.css
-```
-//__./src/index.css__
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
+
+      *__./src/index.css__*
+      ```css
+      @tailwind base;
+      @tailwind components;
+      @tailwind utilities;
+      ```
 
 The rest of the steps in the tutorial were not used. 
 
